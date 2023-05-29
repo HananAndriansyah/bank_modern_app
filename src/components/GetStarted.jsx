@@ -1,12 +1,26 @@
 
-import React from 'react'
+import Styles from '../style'
+import { arrowUp } from '../assets'
+import styles from '../style'
 
-const GetStarted = () => {
-  return (
-    <div>
-      GetStarted
+const GetStarted = () =>  (
+    <div className={` ${Styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}>
+      <div className={` ${Styles.flexCenter} flex-col bg-primary h-[100%] w-[100%] rounded-full`}> 
+        <div className={`${styles.flexStart} flex-row`}>
+          <p className='font-poppins font-medium text-[18px] leading-[23px] mr-2'>
+            <span className='text-gradient'>Get</span>
+          </p>
+            <img src={arrowUp} alt="arrow" className='w-[23px] h-[23px] object-contain' />
+        </div>
+        <div className={`${styles.flexStart} flex-row`}>
+          <p className='font-poppins font-medium text-[18px] leading-[23px] '>
+            <span className='text-gradient'>Started</span>
+          </p>
+        </div>
+      </div>
+      
     </div>
   )
-}
+
 
 export default GetStarted
